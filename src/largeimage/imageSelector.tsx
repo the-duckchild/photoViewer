@@ -5,7 +5,7 @@ export function ImageSelector (props: {urls: string[]}){
     const [currentUrl, setUrl] = useState('');
     const [active, setActive] = useState(100);
     
-    const Images = ({ id, url, isActive, onClick }) => {
+    const Images = ({id, url, isActive  , onClick}) => {
         return (
           <img
             src={url}
@@ -15,7 +15,7 @@ export function ImageSelector (props: {urls: string[]}){
         );
       };
 
-      const navigate = (id, url) => {
+      const navigate = (id: number, url: string) => {
         setActive(id);
         setUrl(url);
       };
