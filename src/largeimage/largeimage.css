@@ -1,0 +1,14 @@
+.largeImage {
+    border-radius: 50px;
+    border-width: 10px;
+    border-color: white;
+    border-style: solid;
+
+}
+
+.thumbnailGrid {
+
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+}
