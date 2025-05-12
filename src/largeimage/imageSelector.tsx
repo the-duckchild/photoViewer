@@ -3,15 +3,15 @@ import './largeimage.css';
 import { imageUrls } from "./getImageUrls";
 
 
-export function ImageSelector (props){ 
+export function ImageSelector (props: {urls: string[]}){ 
 
 
 return (
 
 <div className="thumbnailGrid">
-    {for (let url of props.urls){
-    <img src= {props.urls}/>
-    }}
+    {props.urls.map((link, index) => (
+    <img key={index} src={link}/>)
+    )}
 </div>
 );
 }
