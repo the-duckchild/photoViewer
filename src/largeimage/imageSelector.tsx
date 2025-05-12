@@ -9,8 +9,8 @@ export function ImageSelector (props){
 return (
 
 <div className="thumbnailGrid">
-    {for (let link of props.urls){
-    <img src= {link}/>
+    {for (let url of props.urls){
+    <img src= {props.urls}/>
     }}
 </div>
 );
