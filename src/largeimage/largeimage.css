@@ -10,5 +10,22 @@
 
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 10px;
+    gap: 5px;
+    
+}
+img
+    {
+ border-radius: 15px;
+ border-width: 2px;
+ border-color: white;
+ border-style: solid;
 
+}
+
+.active {
+border-color: red;
+border-radius: 15px;
+ border-width: 2px;
+ border-style: solid;
 }
