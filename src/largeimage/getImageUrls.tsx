@@ -1,10 +1,10 @@
-import React from "react";
 import './largeimage.css';
 
 const brokenImages = [
     1, 24, 32, 36, 44, 47
 ];
-function getImageUrls() {
+
+export function getImageUrls() {
     const urls = [];
     for (let i = 0; i < 50; i++) {
         if (!brokenImages.includes(i)) {

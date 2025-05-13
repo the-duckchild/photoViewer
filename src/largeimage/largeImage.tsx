@@ -1,4 +1,3 @@
-import React from "react";
 import './largeimage.css';
 
 export function PhotoViewer(props: {src: string}) {    // declare and export new function called 'PhotoViewer'
