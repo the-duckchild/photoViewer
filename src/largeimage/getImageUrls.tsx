@@ -9,7 +9,7 @@ function getImageUrls() {
     for (let i = 0; i < 50; i++) {
         if (!brokenImages.includes(i)) {
             const imageNumberString = i.toString().padStart(2, '0');
-            urls.push(`https://picsum.photos/id/6${imageNumberString}/150/100.jpg`)
+            urls.push(`https://picsum.photos/id/6${imageNumberString}/700/500.jpg`)
         }
     }
     return urls;

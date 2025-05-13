@@ -1,31 +1,18 @@
 import React, {useState} from "react";
 import './largeimage.css';
 
-export function ImageSelector (props: {urls: string[]}){
-    const [currentUrl, setUrl] = useState('');
-    const [active, setActive] = useState(100);
-    
-    const Images = ({id, url, isActive  , onClick}) => {
-        return (
-          <img
-            src={url}
-            onClick={() => navigate(id, url)}
-            className={isActive ? "active" : ""}
-          />
-        );
-      };
-
-      const navigate = (id: number, url: string) => {
-        setActive(id);
-        setUrl(url);
-      };
-
+export function ImageSelector (props: {urls: string[], currentUrl: string, activeId: number, handleClick: (id: number, url: string) => void}){
     return (
         <div>
-            <p>{currentUrl}</p>
+            <p>{props.currentUrl}</p>
             <div className="thumbnailGrid">
                 {props.urls.map((link, index) => (
-                   <Images key={index} id={index} url={link} isActive={active === index} onClick={navigate}/>
+                  <img
+                  src={link}
+                  key={index}
+                  onClick={() => props.handleClick(index, link)}
+                  className={props.activeId === index ? "active" : ""}
+                />
                 ))}
             </div>
         </div>

@@ -1,4 +1,4 @@
-.largeImage {
+#largeImage {
     border-radius: 50px;
     border-width: 10px;
     border-color: white;
@@ -23,9 +23,14 @@ img
 
 }
 
+.thumbnailGrid img {
+    width: 150px;
+    height: 100px;
+}
+
 .active {
-border-color: red;
-border-radius: 15px;
- border-width: 2px;
- border-style: solid;
+    border-color: red;
+    border-radius: 15px;
+    border-width: 2px;
+    border-style: solid;
 }

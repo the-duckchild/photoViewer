@@ -6,12 +6,21 @@ import { imageUrls } from './largeimage/getImageUrls'
 
 
 function App() {
+    const [currentUrl, setUrl] = useState(imageUrls[0]);
+    const [active, setActive] = useState(0);
+
+  
+    const selectImage = (id: number, url: string) => {
+      setActive(id);
+      setUrl(url);
+    };
+
     return (
         <div>
             <h1>React Photo Viewer</h1>
-            <PhotoViewer src={"https://picsum.photos/id/600/600/400.jpg"}/>
+            <PhotoViewer src={currentUrl}/>
       
-            <ImageSelector urls={imageUrls}/>
+            <ImageSelector urls={imageUrls} currentUrl={currentUrl} activeId={active} handleClick={selectImage}/>
         </div>       
     )
   
